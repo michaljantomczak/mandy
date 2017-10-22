@@ -3,9 +3,23 @@ Mandy
 
 Welcome to the Mandy device management system.
 
-
-Install
+Set development environment
 ========================
-Use composer:
+Required
+---------
+- docker
 
-    composer install
+Install:
+--------
+Execute command in shell.
+
+    docker-compose up --build -d
+    
+Connect to container:
+
+    docker exec -it {container-hash} /bin/bash
+
+Install vendors:
+
+    php /composer.phar install
+    

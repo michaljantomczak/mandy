@@ -1,0 +1,19 @@
+version: "3"
+services:
+  httpd:
+    build: docker/httpd
+    ports:
+      - 2074:80
+    volumes:
+      - .:/var/www/html
+    links:
+      - mysql
+    environment:
+      - PHP_IDE_CONFIG="serverName=application"
+  mysql:
+    build: docker/mysql
+    environment:
+      - MYSQL_DATABASE='db'
+      - MYSQL_ROOT_PASSWORD='password'
+    ports:
+      - 3074:3306
