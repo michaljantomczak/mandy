@@ -8,6 +8,7 @@ Set development environment
 Required
 ---------
 - docker
+- docker-compose
 
 Install:
 --------
